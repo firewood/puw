@@ -27,7 +27,7 @@ layout: home
     var mn = $('#mn').val();
     var link = links[mn];
     if (link) {
-      window.open(link, null);
+      window.open('https://www18.atwiki.jp/pazdra/pages/' + link + '.html', null);
     }
   }
 </script>
