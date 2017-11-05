@@ -4,9 +4,14 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 ---
+<style>
+input {
+  font-size: 20pt;
+}
+</style>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <form>
-<input type="text" id="mn">
+<input type="number" id="mn">
 <input type="submit" id="go">
 </form>
 <script>
