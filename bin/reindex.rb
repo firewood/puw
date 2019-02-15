@@ -10,6 +10,12 @@ def fetch
   open(url).read
 end
 
+def fetch2
+  url = 'https://www18.atwiki.jp/pazdra/pages/18855.html'
+  puts "Fetching from #{url} ..."
+  open(url).read
+end
+
 def parse(content)
   m = {}
   content.split('<div class=').each do |div|
@@ -27,9 +33,10 @@ def parse(content)
 end
 
 def update
-  json = parse(fetch).to_json
+  json = parse(fetch)
+  json2 = parse(fetch2)
   open('data.json', 'w') do |f|
-    f.write(json)
+    f.write(json.merge(json2).to_json)
   end
 end
 
